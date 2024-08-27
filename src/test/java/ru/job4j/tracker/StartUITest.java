@@ -53,20 +53,14 @@ class StartUITest {
     }
 
     @Test
-    void whenReplaceItem() {
-        Output output = new ConsoleOutput();
+    public void whenReplaceItemIsSuccessful() {
         Tracker tracker = new Tracker();
-        Item item = tracker.add(new Item("Replaced item"));
-        String replacedName = "New item name";
-        Input input = new MockInput(
-                new String[]{"0", String.valueOf(item.getId()), replacedName, "1"}
-        );
-        List<UserAction> actions = List.of(
-                new ReplaceAction(output),
-                new ExitAction(output)
-        );
-        new StartUI(output).init(input, tracker, actions);
-        assertThat(tracker.findById(item.getId()).getName()).isEqualTo(replacedName);
+        Item item = new Item("Bug");
+        tracker.add(item);
+        int id = item.getId();
+        Item updateItem = new Item("Bug with description");
+        tracker.replace(id, updateItem);
+        assertThat(tracker.findById(id).getName()).isEqualTo("Bug with description");
     }
 
     @Test
@@ -183,7 +177,7 @@ class StartUITest {
                         + first + ln
                         + second + ln
                         + "Меню:" + ln
-                        + "0. Показать заявки по имени" + ln
+                        + "0. Показать заявку по имени" + ln
                         + "1. Завершить программу" + ln
                         + "=== Завершение программы ===" + ln
         );

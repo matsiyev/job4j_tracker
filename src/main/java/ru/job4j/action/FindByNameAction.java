@@ -14,7 +14,7 @@ public class FindByNameAction implements UserAction {
 
     @Override
     public String name() {
-        return "Показать заявки по имени";
+        return "Показать заявку по имени";
     }
 
     @Override

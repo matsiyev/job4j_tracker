@@ -12,6 +12,7 @@ public class Tracker {
     public Item add(Item item) {
         item.setId(ids++);
         items.add(item);
+        size++;
         return item;
     }
 
@@ -27,7 +28,7 @@ public class Tracker {
 
     private int indexOf(int id) {
         int result = -1;
-        for (int index = 0; index < size; index++) {
+        for (int index = 0; index < items.size(); index++) {
             if (items.get(index).getId() == id) {
                 result = index;
                 break;
