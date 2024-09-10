@@ -13,12 +13,8 @@ public class UniqueText {
         }
 
         for (String tex : text) {
-            if (check.contains(tex)) {
-                result = true;
-            } else {
+            if (!check.contains(tex)) {
                 result = false;
-                break;
-
             }
         }
         return result;
