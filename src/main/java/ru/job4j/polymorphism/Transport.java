@@ -7,4 +7,3 @@ public interface Transport {
 
     int tuck(int fuel);
 }
-a
