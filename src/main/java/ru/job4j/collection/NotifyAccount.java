@@ -5,6 +5,10 @@ import java.util.List;
 
 public class NotifyAccount {
     public static HashSet<Account> sent(List<Account> accounts) {
-        return new HashSet<>(accounts);
+        HashSet<Account> accountCheck = new HashSet<>();
+        for(Account account : accounts) {
+            accountCheck.add(account);
+        }
+        return accountCheck;
     }
 }
