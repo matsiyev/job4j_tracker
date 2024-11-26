@@ -13,7 +13,7 @@ public class PassportOffice {
             citizens.put(citizen.getPassport(), citizen);
             return true;
         }
-        return result;
+        return false;
     }
 
     public Citizen get(String passport) {
