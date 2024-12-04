@@ -1,6 +1,7 @@
 package ru.job4j.collection;
 
 import org.junit.jupiter.api.Test;
+import static org.junit.Assert.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;

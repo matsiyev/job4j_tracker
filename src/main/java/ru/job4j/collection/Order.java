@@ -8,11 +8,15 @@ public class Order {
 
     public Order(String number, String name) {
         this.number = number;
-        this.name = name;
+        this.name= name;
     }
 
     public String getNumber() {
         return number;
+    }
+
+    public String getName() {
+        return name;
     }
 
     @Override
@@ -21,19 +25,6 @@ public class Order {
                 + "number='" + number + '\''
                 + ", name='" + name + '\''
                 + '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) {
-            return true;
-        }
-        if (o == null || getClass() != o.getClass()) {
-            return false;
-        }
-        Order order = (Order) o;
-        return Objects.equals(number, order.number)
-                && Objects.equals(name, order.name);
     }
 
     @Override
