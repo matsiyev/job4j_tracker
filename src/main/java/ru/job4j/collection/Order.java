@@ -8,7 +8,7 @@ public class Order {
 
     public Order(String number, String name) {
         this.number = number;
-        this.name= name;
+        this.name = name;
     }
 
     public String getNumber() {
